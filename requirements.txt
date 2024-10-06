@@ -3,6 +3,5 @@ pandas
 requests
 scikit-learn
 psycopg2
-smtplib
 plotly
 gunicorn
