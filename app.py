@@ -17,6 +17,7 @@ import numpy as np
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
+app.config['DEBUG'] = True
 
 API_KEY = 'LZIWKUHDC0XBETMU'
 STOCK_BASE_URL = 'https://www.alphavantage.co/query'
