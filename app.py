@@ -18,7 +18,7 @@ import numpy as np
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
 
-API_KEY = 'FVOEWU64HKN1C9U2'
+API_KEY = 'LZIWKUHDC0XBETMU'
 STOCK_BASE_URL = 'https://www.alphavantage.co/query'
 HOLIDAY_API_KEY = '49339829-1b08-49a6-b341-72f937bb885f'
 HOLIDAY_API_URL = 'https://holidayapi.com/v1/holidays'
