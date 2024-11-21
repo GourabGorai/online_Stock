@@ -79,7 +79,7 @@ body, ul, li, a {
 
 @media (orientation: portrait) {
     body {
-        background-image: url('waves2.jpg');
+        background-image: url('waves1.jpg');
     }
 
     .navbar-logo img {
