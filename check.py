@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd 
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
@@ -138,6 +138,17 @@ def visualize_random_forest(model, feature_names):
     else:
         print("The provided model is not a RandomForestRegressor.")
 
+# Visualize first three layers of the first tree in the RandomForest model
+def visualize_first_three_layers_of_random_forest(model, feature_names):
+    if isinstance(model, RandomForestRegressor):
+        estimator = model.estimators_[0]
+        plt.figure(figsize=(30, 15), dpi=200)  # Set high resolution for zoomed-in details
+        plot_tree(estimator, feature_names=feature_names, filled=True, rounded=True, max_depth=3)
+        plt.title("First Three Layers of the First Decision Tree in the Random Forest")
+        plt.show()
+    else:
+        print("The provided model is not a RandomForestRegressor.")
+
 # Main function
 def main():
     symbol = 'AAPL'
@@ -195,5 +206,8 @@ def main():
     feature_names = ['Close', 'MA_5', 'MA_10', 'MA_50', 'Volatility', 'RSI', 'MACD', 'MACD_signal']
     visualize_random_forest(model, feature_names)
 
-if __name__ == "__main__":
+    # Visualize the first three layers of the first tree in the random forest
+    visualize_first_three_layers_of_random_forest(model, feature_names)
+
+if __name__ == '__main__':
     main()
