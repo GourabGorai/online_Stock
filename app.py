@@ -383,7 +383,9 @@ def index():
                 print(f"The prediction for {future_date_str} is {future_prediction}")
                 log_prediction_to_db(session['email'], symbol, future_date, future_prediction)
 
-            start_date = datetime(2024, 1, 1)
+            current_year = datetime.now().year
+
+            start_date = datetime(current_year, 1, 1)
             end_date = datetime.now()
             date_range = pd.date_range(start=start_date, end=end_date)
 
